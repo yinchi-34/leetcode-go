@@ -1,0 +1,2 @@
+# Leetcode
+A Go-based LeetCode study repository organized by algorithm, with a scoring framework, correctness proofs, complexity analysis, and practical use cases. Each problem highlights when and why to apply the algorithm.
