@@ -2,69 +2,61 @@
 
 English | [简体中文](./summary.zh-CN.md)
 
-## 1. Problem Information & Rating
+## 1. Problem Information
 
-- **Problem**: {{LeetCode URL}}
-- **Difficulty**: {{Easy / Medium / Hard}}
-- **Language**: Go
-- **Category**: {{Algorithm Category}}
-- **Tags**: `{{Tag 1}}` `{{Tag 2}}`
+- **Problem**: [{{Problem Number and Title}}]({{Problem URL}})
+- **Official Difficulty**: {{Easy / Medium / Hard}}
+- **Primary Category**: {{Algorithm Category}}
+- **Tags**: `{{Tag 1}}`, `{{Tag 2}}`
 - **Code**: [solution.go](./solution.go)
 - **Tests**: [solution_test.go](./solution_test.go)
 
-### 1.1 Difficulty Ratings
+### Difficulty Rating
 
-- **zerotrac Rating**: {{Score / Pending / Unavailable}}
-- **Official Difficulty**: {{Difficulty}}
+**External Ratings**
 
-### 1.2 Four-Dimensional Rating
+- zerotrac Rating: {{Score / Pending / Unavailable}} ([Source](https://github.com/zerotrac/leetcode_problem_rating))
+- LeetCode Official Difficulty: {{Difficulty}}
 
-**Evaluation Scope**
+**Four-Dimensional Rating — {{Algorithm Name}}**
 
-- Algorithm: {{Algorithm Name}}
-- Input Constraints: {{Constraints}}
-- Target Complexity: {{Complexity}}
-- Language: Go
+- Evaluation Scope: {{Input constraints}}; {{Target complexity}}; Go implementation.
 
-| Dimension | Score (1–5) | Reason |
+| Dimension | Score | Reason |
 |---|---|---|
-| Modeling Difficulty | {{Score}} | {{Reason}} |
-| Knowledge Requirements | {{Score}} | {{Reason}} |
-| Correctness Proof Difficulty | {{Score}} | {{Reason}} |
-| Implementation Difficulty | {{Score}} | {{Reason}} |
+| Modeling Difficulty | {{1–5}} | {{Reason}} |
+| Knowledge Prerequisites | {{1–5}} | {{Reason}} |
+| Correctness Reasoning Difficulty | {{1–5}} | {{Reason}} |
+| Implementation Difficulty | {{1–5}} | {{Reason}} |
 
-Rating criteria: [RATING.md](../../RATING.md)
+Ratings follow [RATING.md](../../../RATING.md). Each dimension is evaluated independently; no overall score is calculated.
 
 ## 2. Problem Understanding
 
-### Problem Description
+{{Describe the problem in your own words.}}
 
-{{Describe the problem in your own words}}
+**Example**
 
-### Constraints
+- Input: `{{Example Input}}`
+- Output: `{{Example Output}}`
 
-- {{Constraint 1}}
-- {{Constraint 2}}
+**Key Requirements**
 
-### Core Problem
+1. {{Input constraint}}
+2. {{Problem requirement}}
+3. {{Boundary condition}}
 
-{{What is the essential problem to solve?}}
+## 3. Initial Approach
 
-## 3. Initial Approach & Thought Process
+### First Idea: {{Initial Approach}}
 
-### 3.1 Initial Approach
+{{Describe your initial idea and why it seemed appropriate.}}
 
-{{What was your first idea?}}
+### Difficulties Encountered
 
-- Initial method: {{Method}}
-- Reason: {{Why this method}}
-- Expected solution: {{Explanation}}
+{{Explain the limitations, mistakes, or unnecessary complexity of the initial approach.}}
 
-### 3.2 Difficulties
-
-{{What problems, mistakes, or unnecessary complexity did you encounter?}}
-
-### 3.3 Thought Transformation
+### Thought Transformation
 
 From:
 
@@ -72,147 +64,178 @@ From:
 
 To:
 
-> {{Improved way of thinking}}
+> {{New way of thinking}}
 
-**Key Discovery:** {{The insight that changed your approach}}
+{{Explain the key insight that led to this transformation and why it simplifies or improves the solution.}}
 
 ## 4. Algorithm Specification
 
+**Algorithm Name:** {{Algorithm Name}}
+
 ### 4.1 Input
 
-{{Define the input using a sequence, set, graph, or another mathematical structure}}
+{{Formally define the input using mathematical notation, such as a sequence, set, graph, or another mathematical object.}}
 
-**Preconditions:**
+For example:
 
-- {{Condition 1}}
-- {{Condition 2}}
+`A = <a₁, a₂, ..., aₙ>`
+
+Subject to:
+
+- {{Input condition 1}}
+- {{Input condition 2}}
 
 ### 4.2 Output
 
-{{Formally define the expected output}}
+{{Formally define the expected output.}}
 
-**Postconditions:**
+For example:
 
-- {{Condition 1}}
-- {{Condition 2}}
+`B = <b₁, b₂, ..., bₘ>`
+
+The output must satisfy:
+
+- {{Postcondition 1}}
+- {{Postcondition 2}}
 
 ### 4.3 Pseudocode
 
-```text
+```text id="uv2s7w"
 ALGORITHM(input)
     {{Initialization}}
 
-    {{Main steps}}
+    {{Algorithm steps}}
 
-    return {{result}}
+    return result
 ```
+
+**State Definitions**
+
+- `{{Variable 1}}`: {{Meaning}}
+- `{{Variable 2}}`: {{Meaning}}
 
 ### 4.4 Correctness
 
-**Proof Method:** {{Loop Invariant / Mathematical Induction / Exchange Argument / Contradiction / Direct Proof / Other}}
+**Proof Method:** {{Choose an appropriate proof method}}
 
-#### Key Properties
+#### I. Key Properties Required for Correctness
 
-{{Identify the properties on which correctness depends}}
+The correctness of the algorithm depends on the following properties:
 
-#### Proof
+1. **{{Property 1}}**: {{Explanation}}
+2. **{{Property 2}}**: {{Explanation}}
+3. **{{Property 3}}**: {{Explanation}}
 
-{{Choose the appropriate proof structure for the algorithm}}
+{{Explain how these properties support the correctness of the algorithm.}}
 
-**If using a loop invariant:**
+#### II. Correctness Proof
+
+> Choose a proof method appropriate for the algorithm. The following structure is intended for algorithms proved using loop invariants. Replace it when another method is more suitable.
 
 **Loop Invariant**
 
-{{State the property that remains true before or after each iteration. Specify the exact point in the loop.}}
+At the {{beginning / end}} of each iteration, the following properties hold:
+
+**Invariant I: {{Name}}**
+
+{{Precisely describe the property that remains unchanged throughout the iterations.}}
+
+**Invariant II: {{Name, optional}}**
+
+{{Describe the correctness property of the partial result or an additional state.}}
 
 **Initialization**
 
-{{Show that the invariant holds before the first iteration}}
+{{Prove that the invariant holds before the first iteration.}}
 
 **Maintenance**
 
-{{Assume the invariant holds before an iteration and prove it remains true afterward}}
+Assume the invariant holds before the current iteration.
+
+Consider the possible cases:
+
+- **Case 1:** {{Explain why the invariant is preserved.}}
+- **Case 2:** {{Explain why the invariant is preserved.}}
+
+Therefore, the invariant continues to hold after the iteration.
 
 **Termination**
 
-{{Use the termination condition and invariant to establish the postcondition}}
+{{Explain why the algorithm terminates.}}
 
-**Conclusion**
+{{Use the invariant and termination condition to prove that the final output satisfies the required postconditions.}}
 
-{{Explain why the algorithm is correct for every valid input}}
+#### III. Conclusion
+
+{{Summarize why the algorithm produces the correct result for every valid input.}}
 
 ### 4.5 Complexity Analysis
 
+Let n denote the input size.
+
 **Time Complexity: O({{...}})**
 
-{{Explain the number of operations, iterations, or recursive calls}}
+{{Derive the time complexity based on the number of iterations, recursive calls, or fundamental operations.}}
 
 **Space Complexity: O({{...}})**
 
-{{Explain auxiliary structures, recursion stack, and output storage}}
+{{Analyze the memory required for variables, auxiliary data structures, recursion stacks, and output storage.}}
 
-## 5. Go Implementation
+{{If necessary, distinguish auxiliary space from total space including the output.}}
 
-```go
-// See solution.go
-```
+## 5. Learning Notes
 
-{{Document only implementation details that need explanation}}
+### Challenge 1: {{Specific Difficulty}}
 
-## 6. Mistakes & Pitfalls
+{{Describe the original confusion, incorrect assumption, or reasoning difficulty.}}
 
-### Common Mistakes
+**Understanding Process**
 
-- {{Mistake 1}}
-- {{Mistake 2}}
+{{Explain how you resolved the difficulty and what changed in your understanding.}}
 
-### Edge Cases
+**Transferable Insight:** {{Extract a generalizable lesson.}}
 
-| Input | Expected Output | Purpose |
-|---|---|---|
-| {{Input}} | {{Output}} | {{Explanation}} |
+### Challenge 2: {{Specific Difficulty, Optional}}
 
-## 7. Key Takeaways
+{{Describe another meaningful challenge encountered while solving the problem.}}
 
-### Core Insight
+**Understanding Process**
 
-{{The most important algorithmic insight}}
+{{Explain the reasoning that led to a better understanding.}}
 
-### Applicability
+**Transferable Insight:** {{Summarize the reusable idea.}}
 
-{{When this algorithm or technique can be reused}}
+## 6. Key Takeaways
 
-### Generalizable Patterns
+This problem illustrates the following reusable concepts:
 
-1. {{Pattern 1}}
-2. {{Pattern 2}}
-3. {{Pattern 3}}
+1. **{{Concept 1}}**: {{Explanation}}
+2. **{{Concept 2}}**: {{Explanation}}
+3. **{{Concept 3}}**: {{Explanation}}
 
-### Comparison With Alternatives
+{{Explain when these concepts can be applied to other problems, including any important assumptions or limitations.}}
 
-{{Advantages, limitations, and trade-offs}}
+## 7. Review Log
 
-## 8. Review Log
-
-| Date | Independent Completion | New Understanding | Open Questions |
+| Date | Independent Completion | Understanding Gained | Areas for Improvement |
 |---|---|---|---|
-| {{YYYY-MM-DD}} | {{Status}} | {{Learning}} | {{Question}} |
+| {{YYYY-MM-DD}} | {{Status}} | {{New Insight}} | {{Remaining Question}} |
 
-### Review Checklist
+### Next Review Checklist
 
-- [ ] Can I reproduce the algorithm independently?
-- [ ] Can I formally define the input and output?
-- [ ] Can I write the pseudocode without looking?
-- [ ] Can I prove correctness independently?
-- [ ] Can I derive the time and space complexity?
-- [ ] Can I apply the same idea to another problem?
+- [ ] Can I implement the algorithm without looking at the solution?
+- [ ] Can I accurately define the input and output?
+- [ ] Can I write the pseudocode independently?
+- [ ] Can I explain why the algorithm is correct?
+- [ ] Can I derive its time and space complexity?
+- [ ] Can I recognize the same algorithmic pattern in other problems?
 
-## 9. Related Problems
+## 8. Related Problems
 
-- {{Problem Number and Title}} — {{Relationship}}
+- [{{Problem Number and Title}}]({{Problem URL}}) — {{Reason for the connection}}
 
 ---
 
-**One-Sentence Summary:**
+**One-Sentence Summary**
 
-{{The most transferable insight from this problem}}
+{{Summarize the most important algorithmic insight gained from this problem.}}
