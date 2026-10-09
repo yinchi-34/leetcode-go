@@ -1,12 +1,12 @@
-# {{1021}}. {{Remove Outermost Parentheses}}
+# 1021. Remove Outermost Parentheses
 
 English | [简体中文](./summary.zh-CN.md)
 
 ## 1. Problem Information & Rating
 
 - **Problem**: [1021. Remove Outermost Parentheses](https://leetcode.cn/problems/remove-outermost-parentheses/)
-- **Difficulty**: {{Easy}}
-- **Category**: Simulation（模拟）
+- **Difficulty**: Easy
+- **Category**: Simulation
 - **Tags**: `Counting` `State Invariant`
 - **Code**: [solution.go](./solution.go)
 - **Tests**: [solution_test.go](./solution_test.go)
@@ -16,7 +16,7 @@ English | [简体中文](./summary.zh-CN.md)
 **External Ratings**
 
 - **zerotrac Rating**: To be checked ([Source](https://github.com/zerotrac/leetcode_problem_rating))
-- **Leedcode Official Difficulty**: {{Easy}}
+- **Leetcode Official Difficulty**: Easy
 
 **Four-Dimensional Rating - Counting**
 
@@ -38,24 +38,24 @@ Given a valid parentheses string, remove the outermost pair of parentheses from 
 Key Requirements：
 
 - The input is guaranteed to be a vaild parentheses string.
-- Primitive: A nonempty valid parentheses string that cannot be split into the concateation of two nonempty valid parentheses strings.
+- Primitive: A nonempty valid parentheses string that cannot be split into the concatenation of two nonempty valid parentheses strings.
 - Only the outermost pair of each primitive is removed. All inner parentheses retain their original order.
 
 ## 3. Initial Approach 
 
 ### First Idea: Stack
 
-When I first saw a parentheses problem, my inital idea was to use a stack.
+When I first saw a parentheses problem, my initial idea was to use a stack.
 
-A stack is suitable for handing matching parentheses and nested structures because it can store unmatched opening parentheses.
+A stack is suitable for handling matching parentheses and nested structures because it can store unmatched opening parentheses.
 
 However, after re-analyzing the problem, I realized:
 
 **This problem does not require identifying the matching partner of every parenthesis. It only requires determining whether each parenthesis belongs to the outermost layer.**
 
-This individual elements stored in a stack provide more information than this problem needs.
+These individual elements stored in a stack provide more information than this problem needs.
 
-The state can therefore be simplified to a single varible, `depth`, representing the current nesting depth.
+The state can therefore be simplified to a single variable, `depth`, representing the current nesting depth.
 
 ### Thought Transformation
 
@@ -72,6 +72,8 @@ This change reduces the auxiliary state from a stack to a single counter.
 
 ## 4. Algorithm Specification
 
+**Algorithm name:** Counting
+
 ### 4.1 Input
 
 A valid parentheses string of length n:
@@ -82,10 +84,10 @@ $$
 
 **Constraints:**
 
-- **Character constraint**: $s_i \in \{\texttt{'('}, \texttt{')'}\}$.
-- **Length constraint**: $n \geq 2$, and $n$ is even.
-- **Prefix validity**: The parentheses depth of every prefix satisfies $d(k) \geq 0$.
-- **Global balance**: The final parentheses depth satisfies  $d(n) = 0$.
+- **Character constraint**: $`s_i \in \{\texttt{'('}, \texttt{')'}\}`$.
+- **Length constraint**: $`n \geq 2`$, and $`n`$ is even.
+- **Prefix validity**: The parentheses depth of every prefix satisfies $`d(k) \geq 0`$.
+- **Global balance**: The final parentheses depth satisfies  $`d(n) = 0`$.
 
 The parentheses depth is defined as:
 
@@ -127,13 +129,13 @@ $$
 **Constraints:**
 
 $$
-s' = \operatorname{inner}(P_1)
-\Vert \operatorname{inner}(P_2)
+s' = \mathrm{inner}(P_1)
+\Vert \mathrm{inner}(P_2)
 \Vert \cdots
-\Vert \operatorname{inner}(P_k)
+\Vert \mathrm{inner}(P_k)
 $$
 
-Here, $\Vert$ denotes string concatenation, and $\operatorname{inner}(P)$ denotes the string obtained by removing the first opening parenthesis and the last closing parenthesis from primitive $P$.
+Here, $`\Vert`$ denotes string concatenation, and $\mathrm{inner}(P)$ denotes the string obtained by removing the first opening parenthesis and the last closing parenthesis from primitive $P$.
 
 ### 4.3 Pseudocode
 
@@ -155,13 +157,11 @@ REMOVE-OUTER-PARENTHESES(s)
     return res
 ```
 
-**state Definitions**:
+**State Definitions**:
 
 At the beginning of each iteration:
 - `depth`: The number of unmatched opening parentheses in the processed prefix.
 - `res`: The inner parentheses retained from processed prefix, in their original order.
-
-### 4.4 Correctness
 
 ### 4.4 Correctness
 
@@ -215,17 +215,13 @@ Assume Invariants I and II hold after the first $i$ characters have been process
 
   Then the update:
 
-  $$
-  depth \leftarrow depth + 1 = d(i+1)
-  $$
+  $`\mathrm{depth} \leftarrow \mathrm{depth} + 1 = d(i+1)`$
 
 - **If $s_{i+1} = \texttt{')'}$**:
 
   First execute:
 
-  $$
-  depth \leftarrow depth - 1 = d(i+1)
-  $$
+  $`\mathrm{depth} \leftarrow \mathrm{depth} - 1 = d(i+1)`$
 
   By the validity of the input, `depth` $> 0$ before the update, so it remains non-negative afterwards.
 
@@ -249,9 +245,9 @@ $$
 By Invariant II:
 
 $$
-res = \operatorname{inner}(P_1)
+res = \mathrm{inner}(P_1)
 \Vert \cdots
-\Vert \operatorname{inner}(P_k)
+\Vert \mathrm{inner}(P_k)
 $$
 
 which is exactly the output required in Section 4.2.
