@@ -2,6 +2,8 @@
 
 English | [简体中文](./summary.zh-CN.md)
 
+[Shared glossary](../../../docs/GLOSSARY.md)
+
 ## 1. Problem Information
 
 - **Problem**: [1541. Minimum Insertions to Balance a Parentheses String](https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/)
@@ -9,8 +11,8 @@ English | [简体中文](./summary.zh-CN.md)
 - **Primary category**: Greedy
 - **Secondary category**: Simulation
 - **Technique tags**: `greedy`, `state simulation`, `counting`, `state invariant`, `locally optimal repair`
-- **Code**: [solution.go](./solution.go) (to be added)
-- **Tests**: [solution_test.go](./solution_test.go) (to be added)
+- **Code**: [solution.go](./solution.go)
+- **Tests**: [solution_test.go](./solution_test.go)
 
 ### Difficulty Ratings
 

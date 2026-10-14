@@ -2,6 +2,8 @@
 
 [English](./summary.md) | 简体中文
 
+[全局术语表](../../../docs/GLOSSARY.md)
+
 ## 1. 题目信息
 
 - **题目**：[1541. Minimum Insertions to Balance a Parentheses String](https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/)
@@ -9,8 +11,8 @@
 - **主分类**：Greedy（贪心）
 - **辅助分类**：Simulation（模拟）
 - **技术标签**：`贪心`、`状态模拟`、`计数`、`状态不变式`、`局部最优修复`
-- **代码**：[solution.go](./solution.go)（待补充）
-- **测试**：[solution_test.go](./solution_test.go)（待补充）
+- **代码**：[solution.go](./solution.go)
+- **测试**：[solution_test.go](./solution_test.go)
 
 ### 难度评分
 
