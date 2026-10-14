@@ -2,6 +2,16 @@
 
 [English](./summary.md) | 简体中文
 
+<!--
+模板维护：将本文件和 summary.md 复制到
+Algorithms/<分类>/<题目录>/ 或 data-structures/<分类>/<题目录>/。
+复制后，将 ../docs/ 改为 ../../../docs/。
+代码和测试链接指向目标题目录内的文件。
+完成题解后删除本注释。
+-->
+
+术语遵循[共享术语表](../docs/GLOSSARY.md)，数学记号遵循仓库的 [GitHub 数学书写规范](../docs/GITHUB_MATH.md)。
+
 ## 1. 题目信息
 
 - **题目**：[{{题号与英文名称}}]({{题目链接}})
@@ -29,7 +39,7 @@
 | 正确性论证难度 | {{1–5}} | {{理由}} |
 | 实现难度 | {{1–5}} | {{理由}} |
 
-评分遵循仓库 [RATING.zh-CN.md](../../../RATING.zh-CN.md)，各维度独立评价，不合成总分。
+评分遵循仓库 [RATING.zh-CN.md](../docs/RATING.zh-CN.md)，各维度独立评价，不合成总分。
 
 ## 2. 题意理解（Problem Understanding）
 
@@ -78,7 +88,7 @@
 
 例如：
 
-`A = <a₁, a₂, ..., aₙ>`
+$`A = \langle a_1, a_2, \ldots, a_n \rangle`$
 
 满足：
 
@@ -91,7 +101,7 @@
 
 例如：
 
-`B = <b₁, b₂, ..., bₘ>`
+$`B = \langle b_1, b_2, \ldots, b_m \rangle`$
 
 输出必须满足：
 
@@ -171,7 +181,7 @@ ALGORITHM(input)
 
 ### 4.5 复杂度分析（Complexity Analysis）
 
-设输入规模为 n。
+设输入规模为 $`n`$。
 
 **时间复杂度：O({{...}})**
 

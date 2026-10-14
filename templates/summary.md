@@ -2,6 +2,16 @@
 
 English | [简体中文](./summary.zh-CN.md)
 
+<!--
+Template maintenance: copy this file and summary.zh-CN.md into
+Algorithms/<category>/<problem>/ or data-structures/<category>/<problem>/.
+In the copied files, change ../docs/ to ../../../docs/.
+Code and test links refer to files in the
+destination problem directory. Remove this comment from completed notes.
+-->
+
+Use the [shared glossary](../docs/GLOSSARY.md) and follow the repository's [GitHub math conventions](../docs/GITHUB_MATH.md).
+
 ## 1. Problem Information
 
 - **Problem**: [{{Problem Number and Title}}]({{Problem URL}})
@@ -29,7 +39,7 @@ English | [简体中文](./summary.zh-CN.md)
 | Correctness Reasoning Difficulty | {{1–5}} | {{Reason}} |
 | Implementation Difficulty | {{1–5}} | {{Reason}} |
 
-Ratings follow [RATING.md](../../../RATING.md). Each dimension is evaluated independently; no overall score is calculated.
+Ratings follow [RATING.md](../docs/RATING.md). Each dimension is evaluated independently; no overall score is calculated.
 
 ## 2. Problem Understanding
 
@@ -78,7 +88,7 @@ To:
 
 For example:
 
-`A = <a₁, a₂, ..., aₙ>`
+$`A = \langle a_1, a_2, \ldots, a_n \rangle`$
 
 Subject to:
 
@@ -91,7 +101,7 @@ Subject to:
 
 For example:
 
-`B = <b₁, b₂, ..., bₘ>`
+$`B = \langle b_1, b_2, \ldots, b_m \rangle`$
 
 The output must satisfy:
 
@@ -100,7 +110,7 @@ The output must satisfy:
 
 ### 4.3 Pseudocode
 
-```text id="uv2s7w"
+```text
 ALGORITHM(input)
     {{Initialization}}
 
@@ -171,7 +181,7 @@ Therefore, the invariant continues to hold after the iteration.
 
 ### 4.5 Complexity Analysis
 
-Let n denote the input size.
+Let $`n`$ denote the input size.
 
 **Time Complexity: O({{...}})**
 
