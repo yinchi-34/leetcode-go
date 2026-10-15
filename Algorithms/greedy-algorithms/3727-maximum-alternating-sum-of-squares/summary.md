@@ -223,6 +223,10 @@ MAX-ALTERNATING-SUM(nums)
 - `k`: the number of minus positions, which is also the starting index of the plus group after sorting.
 - `res`: the accumulated alternating score so far, stored as `int64`.
 
+**Input Mutation (Go)**
+
+`maxAlternatingSum` first replaces the elements of `nums` with their squares in place, then sorts them in ascending order, modifying the caller's slice. To preserve the input, copy the slice first (for example, `append([]int(nil), nums...)`) and pass the copy.
+
 **Greedy Strategy**
 
 Elements with larger squared values belong in plus positions; elements with smaller squared values belong in minus positions.
