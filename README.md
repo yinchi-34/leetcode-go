@@ -71,7 +71,7 @@ The first command tests all packages; the second tests one category.
 ## Adding a Problem
 
 1. Create a directory under `Algorithms/<category>/` or `data-structures/<category>/`, named `<number>-<english-title>` in lowercase with hyphens. Introductory exercises go under `primers/`.
-2. Add `solution.go` and `solution_test.go`. Test the examples, boundary cases, and cases that exercise the key branches of the algorithm.
+2. Add `solution.go` and `solution_test.go`, both using `package solution`. Test the examples, boundary cases, and cases that exercise the key branches of the algorithm.
 3. When writing notes, copy the [English template](templates/summary.md) and [Chinese template](templates/summary.zh-CN.md) into the problem directory. Change `../docs/` to `../../../docs/` in the copied files, then replace the placeholders and remove the copying instructions in the opening comment.
 4. Rate the solution using the [rating criteria](docs/RATING.md), stating its constraints and target complexity. Keep the facts, scores, and mathematical meaning consistent between the two languages.
 5. Check terminology against the [shared glossary](docs/GLOSSARY.md) and mathematical notation against the [GitHub math conventions](docs/GITHUB_MATH.md). Verify the relative links and run `go test ./...`.

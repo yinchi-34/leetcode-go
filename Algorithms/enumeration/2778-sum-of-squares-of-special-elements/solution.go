@@ -1,4 +1,4 @@
-package main 
+package solution
 
 func sumOfSquares(nums []int) int {
 	res := 0

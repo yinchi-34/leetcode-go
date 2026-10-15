@@ -71,7 +71,7 @@ go test ./Algorithms/greedy-algorithms/...
 ## 新增一道题
 
 1. 在 `Algorithms/<分类>/` 或 `data-structures/<分类>/` 下建目录，命名为 `<题号>-<英文题名>`，全部小写，用连字符分隔。入门练习放在 `primers/` 下。
-2. 编写 `solution.go` 和 `solution_test.go`，测试题目示例、边界条件与算法的关键分支。
+2. 编写 `solution.go` 和 `solution_test.go`，两者统一使用 `package solution`，测试题目示例、边界条件与算法的关键分支。
 3. 整理题解时，将[中文模板](templates/summary.zh-CN.md)和[英文模板](templates/summary.md)复制到题目目录。将其中的 `../docs/` 改为 `../../../docs/`，再替换占位内容，并删除开头注释中的复制说明。
 4. 按[评分标准](docs/RATING.zh-CN.md)评价解法，写明约束和目标复杂度。中英文版本的事实、评分与数学含义应保持一致。
 5. 对照[全局术语表](docs/GLOSSARY.md)检查术语，按 [GitHub 数学书写规范](docs/GITHUB_MATH.md)检查数学记号，确认相对链接有效，并运行 `go test ./...`。

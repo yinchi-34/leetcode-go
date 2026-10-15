@@ -1,4 +1,4 @@
-package main
+package solution
 
 func removeOuterParentheses(S string) string {
 	res := []byte{}

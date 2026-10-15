@@ -1,4 +1,4 @@
-package main
+package solution
 
 func smallestEvenMultiple(n int) int {
 	if n%2 == 0 {

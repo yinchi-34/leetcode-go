@@ -1,4 +1,4 @@
-package main 
+package solution
 
 func minAddToMakeValid(s string) int {
 	res, right := 0, 0
