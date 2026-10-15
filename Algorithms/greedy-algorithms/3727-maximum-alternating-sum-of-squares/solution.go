@@ -2,7 +2,7 @@ package main
 
 import "sort"
 
-func smallestEvenMultiple(nums []int) int64 {
+func maxAlternatingSum(nums []int) int64 {
 	n := len(nums)
 
 	for i := 0; i < n; i++ {
@@ -18,5 +18,5 @@ func smallestEvenMultiple(nums []int) int64 {
 			res -= int64(nums[i])
 		}
 	}
-	return int64(res)
+	return res
 }

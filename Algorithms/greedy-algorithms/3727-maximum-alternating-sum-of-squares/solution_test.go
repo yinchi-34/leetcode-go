@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestSmallestEvenMultiple(t *testing.T) {
+func TestMaxAlternatingSum(t *testing.T) {
 	tests := []struct {
 		name     string
 		nums     []int
@@ -22,7 +22,7 @@ func TestSmallestEvenMultiple(t *testing.T) {
 
 	for _, test := range tests {
 		t.Run(test.name, func(t *testing.T) {
-			result := smallestEvenMultiple(test.nums)
+			result := maxAlternatingSum(test.nums)
 			if result != test.expected {
 				t.Errorf("For nums=%v, expected %d, but got %d", test.nums, test.expected, result)
 			}
