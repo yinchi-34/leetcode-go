@@ -18,7 +18,7 @@
 
 **外部评分**
 
-- zerotrac 评分：1759.02（待对照[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)核实）
+- zerotrac 评分：1759.02（[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)）
 - 力扣官方难度：Medium
 
 **四维评分 — 右括号需求计数解法**

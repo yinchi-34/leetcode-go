@@ -2,25 +2,27 @@
 
 English | [简体中文](./summary.zh-CN.md)
 
-## 1. Problem Information & Rating
+Use the [shared glossary](../../../docs/GLOSSARY.md) and follow the repository's [GitHub math conventions](../../../docs/GITHUB_MATH.md).
+
+## 1. Problem Information
 
 - **Problem**: [1021. Remove Outermost Parentheses](https://leetcode.cn/problems/remove-outermost-parentheses/)
-- **Difficulty**: Easy
-- **Category**: Simulation
-- **Tags**: `Counting` `State Invariant`
+- **Official Difficulty**: Easy
+- **Primary Category**: Simulation
+- **Tags**: `Simulation`, `Counting`, `State Invariant`
 - **Code**: [solution.go](./solution.go)
 - **Tests**: [solution_test.go](./solution_test.go)
 
-### 1.1 Difficulty Ratings
+### Difficulty Rating
 
 **External Ratings**
 
-- **zerotrac Rating**: To be checked ([Source](https://github.com/zerotrac/leetcode_problem_rating))
-- **Leetcode Official Difficulty**: Easy
+- zerotrac Rating: 1311.35 ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
+- LeetCode Official Difficulty: Easy
 
-**Four-Dimensional Rating - Counting**
+**Four-Dimensional Rating — Depth Counting**
 
-**Evaluation Scope**: Valid parentheses strings; 
+- Evaluation scope: a valid parentheses string of length $`n \le 10^5`$; target time complexity $`O(n)`$ and $`O(1)`$ extra space excluding the output; Go implementation.
 
 | Dimension | Score | Reason |
 |---|---|---|
@@ -28,6 +30,8 @@ English | [简体中文](./summary.zh-CN.md)
 | Knowledge Prerequisites | 1/5 | Requires only loops, conditional statements, and a counter |
 | Correctness Reasoning Difficulty | 2/5 | Requires case analysis by parenthesis type and a simple state invariant |
 | Implementation Difficulty | 2/5 | Uses few branches, but the order of state updates and condition checks requires care |
+
+Ratings follow [RATING.md](../../../docs/RATING.md). Each dimension is evaluated independently; no overall score is calculated.
 
 ## 2. Problem Understanding
 

@@ -32,7 +32,7 @@ The value of $B$ is estimated from actual contest results by finding the difficu
 
 When the contestant rating and problem difficulty rating are equal, the model predicts a 50% probability of solving the problem.
 
-This repository directly references the published ratings and preserves links to the original data source.
+This repository directly references the published ratings and preserves links to the original data source. Only two states are recorded: if the data contains the problem, record the score rounded to two decimal places; otherwise, write "No data available".
 
 The rating backend of the project is not open source. The estimated ratings are intended for comparing relative problem difficulty and do not represent an individual's actual probability of solving a problem.
 
@@ -141,8 +141,7 @@ The explanation should identify concrete implementation challenges, such as slic
 
 | Status | Meaning |
 | --- | --- |
-| To be checked | The zerotrac rating or official difficulty has not yet been verified |
-| No data available | The source has been checked, but no corresponding rating or label is available |
+| No data available | The zerotrac data has been checked, but it does not contain the problem |
 | To be rated | A four-dimensional rating has not yet been assigned |
 
 Every problem should retain fields for all three rating models.
@@ -159,8 +158,8 @@ If multiple solutions are included, repeat the **Four-Dimensional Rating** secti
 ## Difficulty Rating
 
 - Problem: [Problem Number and Name](problem-link)
-- zerotrac rating: To be checked ([source](source-link))
-- LeetCode official difficulty: To be checked
+- zerotrac rating: Score / No data available ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
+- LeetCode official difficulty: Easy / Medium / Hard
 
 ### Four-Dimensional Rating
 
