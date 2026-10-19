@@ -17,6 +17,7 @@ Use the [shared glossary](../docs/GLOSSARY.md) and follow the repository's [GitH
 - **Problem**: [{{Problem Number and Title}}]({{Problem URL}})
 - **Official Difficulty**: {{Easy / Medium / Hard}}
 - **Primary Category**: {{Algorithm Category}}
+- **Secondary Category**: {{Algorithm Category, optional}}
 - **Tags**: `{{Tag 1}}`, `{{Tag 2}}`
 - **Code**: [solution.go](./solution.go)
 - **Tests**: [solution_test.go](./solution_test.go)
@@ -25,8 +26,8 @@ Use the [shared glossary](../docs/GLOSSARY.md) and follow the repository's [GitH
 
 **External Ratings**
 
-- zerotrac Rating: {{Score / Pending / Unavailable}} ([Source](https://github.com/zerotrac/leetcode_problem_rating))
-- LeetCode Official Difficulty: {{Difficulty}}
+- zerotrac Rating: {{Score, two decimal places / No data available}} ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
+- LeetCode Official Difficulty: {{Easy / Medium / Hard}}
 
 **Four-Dimensional Rating — {{Algorithm Name}}**
 

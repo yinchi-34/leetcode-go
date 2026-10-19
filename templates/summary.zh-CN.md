@@ -15,8 +15,9 @@ Algorithms/<分类>/<题目录>/ 或 data-structures/<分类>/<题目录>/。
 ## 1. 题目信息
 
 - **题目**：[{{题号与英文名称}}]({{题目链接}})
-- **官方难度**：{{Easy / Medium / Hard}}
-- **主分类**：{{算法分类}}
+- **官方难度**：{{Easy（简单） / Medium（中等） / Hard（困难）}}
+- **主分类**：{{English Category（中文分类）}}
+- **辅助分类**：{{English Category（中文分类），可省略}}
 - **技术标签**：`{{标签1}}`、`{{标签2}}`
 - **代码**：[solution.go](./solution.go)
 - **测试**：[solution_test.go](./solution_test.go)
@@ -25,8 +26,8 @@ Algorithms/<分类>/<题目录>/ 或 data-structures/<分类>/<题目录>/。
 
 **外部评分**
 
-- zerotrac 评分：{{分数 / 待查询 / 暂无数据}}（[数据来源](https://github.com/zerotrac/leetcode_problem_rating)）
-- 力扣官方难度：{{难度}}
+- zerotrac 评分：{{分数，保留两位小数 / 暂无数据}}（[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)）
+- 力扣官方难度：{{Easy / Medium / Hard}}
 
 **四维评分 — {{算法名称}}**
 
