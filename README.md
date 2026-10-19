@@ -49,6 +49,7 @@ Browse [algorithms](Algorithms/), [data structures](data-structures/), or [intro
 │   ├── RATING.zh-CN.md          # Rating criteria in Chinese
 │   ├── GLOSSARY.md             # Shared Chinese–English glossary
 │   ├── GITHUB_MATH.md          # GitHub math conventions
+│   ├── PROMPT.zh-CN.md         # Prompt for writing summaries (Chinese)
 │   └── investigations/         # Investigation records
 │       ├── README.md
 │       ├── README.zh-CN.md

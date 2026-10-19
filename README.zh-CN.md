@@ -49,6 +49,7 @@
 │   ├── RATING.zh-CN.md          # 中文难度评分标准
 │   ├── GLOSSARY.md             # 中英文全局术语表
 │   ├── GITHUB_MATH.md          # GitHub 数学书写规范
+│   ├── PROMPT.zh-CN.md         # 题解写作提示词
 │   └── investigations/         # 排查记录
 │       ├── README.md
 │       ├── README.zh-CN.md
