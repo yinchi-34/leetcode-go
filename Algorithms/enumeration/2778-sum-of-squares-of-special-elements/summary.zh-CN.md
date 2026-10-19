@@ -18,7 +18,7 @@
 
 **外部评分**
 
-- zerotrac 评分：待对照[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)核实
+- zerotrac 评分：1151.94（[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)）
 - 力扣官方难度：Easy
 
 **四维评分 — 枚举到 √n 的成对因数解法**

@@ -2,12 +2,14 @@
 
 [English](./summary.md) | 简体中文
 
+术语遵循[共享术语表](../../../docs/GLOSSARY.md)，数学记号遵循仓库的 [GitHub 数学书写规范](../../../docs/GITHUB_MATH.md)。
+
 ## 1. 题目信息
 
 - **题目**：[1021. Remove Outermost Parentheses](https://leetcode.cn/problems/remove-outermost-parentheses/)
 - **官方难度**：Easy（简单）
 - **主分类**：Simulation（模拟）
-- **技术标签**：`计数`、`状态不变式`
+- **技术标签**：`模拟`、`计数`、`状态不变式`
 - **代码**：[solution.go](./solution.go)
 - **测试**：[solution_test.go](./solution_test.go)
 
@@ -15,18 +17,21 @@
 
 **外部评分**
 
-- zerotrac 评分：待查询（[数据来源](https://github.com/zerotrac/leetcode_problem_rating)）
+- zerotrac 评分：1311.35（[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)）
 - 力扣官方难度：Easy
 
 **四维评分 — 深度计数解法**
+
+- 评价范围：输入为长度 $`n \le 10^5`$ 的有效括号字符串；目标时间复杂度 $`O(n)`$，不计输出的额外空间 $`O(1)`$；Go 实现。
 
 | 维度 | 分数 | 评分理由 |
 |---|---|---|
 | 建模难度 | 2/5 | 需要将括号匹配问题转换为嵌套深度计数 |
 | 知识门槛 | 1/5 | 仅依赖循环、条件判断和计数器 |
-| 正确性论证 | 2/5 | 需要根据括号类型进行分类，并说明状态不变量 |
+| 正确性论证难度 | 2/5 | 需要根据括号类型进行分类，并说明状态不变量 |
 | 实现难度 | 2/5 | 分支较少，但需要注意状态更新与判断的执行顺序 |
 
+评分遵循仓库 [RATING.zh-CN.md](../../../docs/RATING.zh-CN.md)，各维度独立评价，不合成总分。
 
 ## 2. 题意理解（Problem Understanding）
 

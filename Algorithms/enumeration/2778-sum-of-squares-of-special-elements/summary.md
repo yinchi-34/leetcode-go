@@ -18,7 +18,7 @@ English | [简体中文](./summary.zh-CN.md)
 
 **External Ratings**
 
-- zerotrac Rating: Pending verification against the [source data](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt).
+- zerotrac Rating: 1151.94 ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
 - LeetCode Official Difficulty: Easy
 
 **Four-Dimensional Rating - Paired Divisor Enumeration Up to $`\sqrt{n}`$**

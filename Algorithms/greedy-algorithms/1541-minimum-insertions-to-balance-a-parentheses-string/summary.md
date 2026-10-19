@@ -18,7 +18,7 @@ English | [简体中文](./summary.zh-CN.md)
 
 **External ratings**
 
-- zerotrac rating: 1759.02 (to be verified against the [data source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
+- zerotrac rating: 1759.02 ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
 - LeetCode official difficulty: Medium
 
 **Four-dimension rating — right-parenthesis demand counting solution**

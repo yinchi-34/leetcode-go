@@ -18,7 +18,7 @@
 
 **外部评分**
 
-- zerotrac 评分：1454
+- zerotrac 评分：1454.93（[数据来源](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt)）
 - 力扣官方难度：Medium
 
 **四维评分 — 贪心 + 排序**

@@ -10,7 +10,7 @@ English | [简体中文](./summary.zh-CN.md)
 - **Official Difficulty**: Medium
 - **Primary Category**: Greedy
 - **Secondary Category**: Sorting
-- **Technique Tags**: `Greedy`, `Sorting`
+- **Tags**: `Greedy`, `Sorting`
 - **Code**: [solution.go](./solution.go)
 - **Tests**: [solution_test.go](./solution_test.go)
 
@@ -18,7 +18,7 @@ English | [简体中文](./summary.zh-CN.md)
 
 **External Ratings**
 
-- zerotrac rating: 1454
+- zerotrac rating: 1454.93 ([source](https://github.com/zerotrac/leetcode_problem_rating/blob/main/ratings.txt))
 - LeetCode official difficulty: Medium
 
 **Four-Dimension Rating — Greedy + Sorting**
