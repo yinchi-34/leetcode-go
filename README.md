@@ -47,6 +47,8 @@ Browse [algorithms](Algorithms/), [data structures](data-structures/), or [intro
 ├── docs/                        # Rating criteria and documentation conventions
 │   ├── RATING.md                # Rating criteria in English
 │   ├── RATING.zh-CN.md          # Rating criteria in Chinese
+│   ├── CLRS_INDEX.md            # CLRS reverse index in English
+│   ├── CLRS_INDEX.zh-CN.md      # CLRS reverse index in Chinese
 │   ├── GLOSSARY.md             # Shared Chinese–English glossary
 │   ├── GITHUB_MATH.md          # GitHub math conventions
 │   ├── PROMPT.zh-CN.md         # Prompt for writing summaries (Chinese)
@@ -75,10 +77,12 @@ The first command tests all packages; the second tests one category.
 2. Add `solution.go` and `solution_test.go`, both using `package solution`. Test the examples, boundary cases, and cases that exercise the key branches of the algorithm.
 3. When writing notes, copy the [English template](templates/summary.md) and [Chinese template](templates/summary.zh-CN.md) into the problem directory. Change `../docs/` to `../../../docs/` in the copied files, then replace the placeholders and remove the copying instructions in the opening comment.
 4. Rate the solution using the [rating criteria](docs/RATING.md), stating its constraints and target complexity. Keep the facts, scores, and mathematical meaning consistent between the two languages.
-5. Check terminology against the [shared glossary](docs/GLOSSARY.md) and mathematical notation against the [GitHub math conventions](docs/GITHUB_MATH.md). Verify the relative links and run `go test ./...`.
+5. Check terminology against the [shared glossary](docs/GLOSSARY.md) and mathematical notation against the [GitHub math conventions](docs/GITHUB_MATH.md). Update the [CLRS index](docs/CLRS_INDEX.md), verify the relative links, and run `go test ./...`.
 
 ## Documentation Conventions
 
+- All CLRS section numbers cited in this repository refer to the **3rd edition** (Cormen, Leiserson, Rivest, Stein, *Introduction to Algorithms*, 3rd ed., MIT Press, 2009).
+- [CLRS index](docs/CLRS_INDEX.md): problems grouped by CLRS section.
 - [Shared glossary](docs/GLOSSARY.md): canonical Chinese–English terminology and definitions.
 - [GitHub math conventions](docs/GITHUB_MATH.md): notation, layout, and rendering verification.
 
