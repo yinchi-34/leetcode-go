@@ -226,6 +226,14 @@ This problem illustrates the following reusable concepts:
 
 {{Explain when these concepts can be applied to other problems, including any important assumptions or limitations.}}
 
+### CLRS Connections
+
+Section numbers follow CLRS, 3rd edition. Relation is either "Direct" or "Related idea"; if no section fits, write "No matching section" and keep only the concept name.
+
+| Concept | CLRS Section | Relation | How It Appears Here |
+|---|---|---|---|
+| {{Concept}} | {{e.g. §16.2 Elements of the greedy strategy}} | {{Direct / Related idea}} | {{Which step of this problem}} |
+
 ## 7. Review Log
 
 | Date | Independent Completion | Understanding Gained | Areas for Improvement |

@@ -47,6 +47,8 @@
 ├── docs/                        # 评分标准与文档规范
 │   ├── RATING.md                # 英文难度评分标准
 │   ├── RATING.zh-CN.md          # 中文难度评分标准
+│   ├── CLRS_INDEX.md            # 英文 CLRS 反查索引
+│   ├── CLRS_INDEX.zh-CN.md      # 中文 CLRS 反查索引
 │   ├── GLOSSARY.md             # 中英文全局术语表
 │   ├── GITHUB_MATH.md          # GitHub 数学书写规范
 │   ├── PROMPT.zh-CN.md         # 题解写作提示词
@@ -75,10 +77,12 @@ go test ./Algorithms/greedy-algorithms/...
 2. 编写 `solution.go` 和 `solution_test.go`，两者统一使用 `package solution`，测试题目示例、边界条件与算法的关键分支。
 3. 整理题解时，将[中文模板](templates/summary.zh-CN.md)和[英文模板](templates/summary.md)复制到题目目录。将其中的 `../docs/` 改为 `../../../docs/`，再替换占位内容，并删除开头注释中的复制说明。
 4. 按[评分标准](docs/RATING.zh-CN.md)评价解法，写明约束和目标复杂度。中英文版本的事实、评分与数学含义应保持一致。
-5. 对照[全局术语表](docs/GLOSSARY.md)检查术语，按 [GitHub 数学书写规范](docs/GITHUB_MATH.md)检查数学记号，确认相对链接有效，并运行 `go test ./...`。
+5. 对照[全局术语表](docs/GLOSSARY.md)检查术语，按 [GitHub 数学书写规范](docs/GITHUB_MATH.md)检查数学记号，同步更新 [CLRS 反查索引](docs/CLRS_INDEX.zh-CN.md)，确认相对链接有效，并运行 `go test ./...`。
 
 ## 文档约定
 
+- 本仓库引用的《算法导论》（CLRS）章节号均以**第三版**（Cormen, Leiserson, Rivest, Stein, *Introduction to Algorithms*, 3rd ed., MIT Press, 2009）为准。
+- [CLRS 反查索引](docs/CLRS_INDEX.zh-CN.md)：按 CLRS 章节列出关联的题目。
 - [全局术语表](docs/GLOSSARY.md)：统一中英文术语及定义。
 - [GitHub 数学书写规范](docs/GITHUB_MATH.md)：公式写法、排版与渲染验收方式。
 
