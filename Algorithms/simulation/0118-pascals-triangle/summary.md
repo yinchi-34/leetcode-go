@@ -30,7 +30,7 @@ Use the [shared glossary](../../../docs/GLOSSARY.md) and follow the repository's
 | Modeling Difficulty | 1 | The statement already gives the rule "each number is the sum of the two numbers directly above it"; filling the table row by row follows the definition |
 | Knowledge Prerequisites | 1 | Only 2D slices, nested loops, and a conditional are needed |
 | Correctness Reasoning Difficulty | 2 | Needs one row-by-row loop invariant plus a check that reads from the previous row stay in bounds |
-| Implementation Difficulty | 2 | Row `i` has length `i+1` with 1 at both ends, and `ret[i-1]` may be accessed only when `i ≥ 1` |
+| Implementation Difficulty | 2 | Row `i` has length `i+1` with 1 at both ends, and `res[i-1]` may be accessed only when `i ≥ 1` |
 
 Ratings follow [RATING.md](../../../docs/RATING.md). Each dimension is evaluated independently and not combined into a total score.
 
@@ -79,20 +79,20 @@ The output must satisfy $`R_i[j] = P(i, j)`$ for all $`0 \le i < n`$ and $`0 \le
 
 ```text
 GENERATE(n)
-    ret ← array of length n, each element is a row
+    res ← array of length n, each element is a row
     for i ← 0 to n - 1
-        ret[i] ← new array of length i + 1
+        res[i] ← new array of length i + 1
         for j ← 0 to i
             if j == 0 or j == i
-                ret[i][j] ← 1
+                res[i][j] ← 1
             else
-                ret[i][j] ← ret[i-1][j] + ret[i-1][j-1]
-    return ret
+                res[i][j] ← res[i-1][j] + res[i-1][j-1]
+    return res
 ```
 
 **State Definitions**
 
-- `ret[i]`: row `i` of Pascal's triangle. When the outer loop works on row `i`, `ret[0..i-1]` are complete and never modified again.
+- `res[i]`: row `i` of Pascal's triangle. When the outer loop works on row `i`, `res[0..i-1]` are complete and never modified again.
 - `i`: the row being generated, which is also the index of its last element.
 - `j`: the column being filled in the current row.
 
@@ -103,10 +103,10 @@ GENERATE(n)
 #### 1. Key Conditions for Correctness
 
 1. **Recursive definition (given by the problem)**: $`P(i, j)`$ is uniquely determined by the recurrence in 4.2. Row $`i`$ depends only on row $`i-1`$, so computing rows in increasing order guarantees every needed value is already available.
-2. **Valid indices (lemma to prove)**: in the `else` branch, both `ret[i-1][j-1]` and `ret[i-1][j]` lie within row $`i-1`$.
+2. **Valid indices (lemma to prove)**: in the `else` branch, both `res[i-1][j-1]` and `res[i-1][j]` lie within row $`i-1`$.
 3. **Rows share no storage (implementation fact)**: each row is allocated separately with `make`, so writing row $`i`$ cannot change a finished row.
 
-**Lemma (valid indices)**: the `else` branch requires $`j \ne 0`$ and $`j \ne i`$; together with $`0 \le j \le i`$ this gives $`1 \le j \le i-1`$. That forces $`i \ge 2`$, so $`i-1 \ge 1`$ and row $`i-1`$ exists. Row $`i-1`$ has valid indices $`0 \ldots i-1`$, and since $`0 \le j-1`$ and $`j \le i-1`$, both indices are valid. In particular, for $`i = 0`$ and $`i = 1`$ the inner loop only takes the `if` branch and never touches a nonexistent `ret[-1]`.
+**Lemma (valid indices)**: the `else` branch requires $`j \ne 0`$ and $`j \ne i`$; together with $`0 \le j \le i`$ this gives $`1 \le j \le i-1`$. That forces $`i \ge 2`$, so $`i-1 \ge 1`$ and row $`i-1`$ exists. Row $`i-1`$ has valid indices $`0 \ldots i-1`$, and since $`0 \le j-1`$ and $`j \le i-1`$, both indices are valid. In particular, for $`i = 0`$ and $`i = 1`$ the inner loop only takes the `if` branch and never touches a nonexistent `res[-1]`.
 
 #### 2. Correctness Proof
 
@@ -116,7 +116,7 @@ At the start of each outer-loop iteration (about to process row $`i`$):
 
 **Invariant I: finished rows are correct**
 
-For every $`0 \le r < i`$, `ret[r]` has length $`r+1`$ and `ret[r][j]` $`= P(r, j)`$ for $`0 \le j \le r`$.
+For every $`0 \le r < i`$, `res[r]` has length $`r+1`$ and `res[r][j]` $`= P(r, j)`$ for $`0 \le j \le r`$.
 
 **Initialization**
 
@@ -127,13 +127,13 @@ When $`i = 0`$ there are no finished rows, so Invariant I holds vacuously.
 Assume Invariant I holds before row $`i`$. The algorithm allocates a new row of length $`i+1`$ and writes each $`j \in \{0, \ldots, i\}`$ exactly once:
 
 - **Case 1: $`j = 0`$ or $`j = i`$.** It writes 1, matching the definition of $`P(i, j)`$.
-- **Case 2: $`0 < j < i`$.** By the lemma both indices are valid; by Invariant I, `ret[i-1][j-1]` $`= P(i-1, j-1)`$ and `ret[i-1][j]` $`= P(i-1, j)`$. Their sum is exactly $`P(i, j)`$.
+- **Case 2: $`0 < j < i`$.** By the lemma both indices are valid; by Invariant I, `res[i-1][j-1]` $`= P(i-1, j-1)`$ and `res[i-1][j]` $`= P(i-1, j)`$. Their sum is exactly $`P(i, j)`$.
 
-By key condition 3, writing row $`i`$ does not change `ret[0..i-1]`. So after row $`i`$, Invariant I holds for every $`r < i+1`$.
+By key condition 3, writing row $`i`$ does not change `res[0..i-1]`. So after row $`i`$, Invariant I holds for every $`r < i+1`$.
 
 **Termination**
 
-The outer loop runs exactly $`n`$ times and the inner loop exactly $`i+1`$ times on row $`i`$, so the algorithm terminates. At termination $`i = n`$, and by Invariant I, `ret[0..n-1]` are exactly the first $`n`$ rows of Pascal's triangle.
+The outer loop runs exactly $`n`$ times and the inner loop exactly $`i+1`$ times on row $`i`$, so the algorithm terminates. At termination $`i = n`$, and by Invariant I, `res[0..n-1]` are exactly the first $`n`$ rows of Pascal's triangle.
 
 #### 3. Conclusion
 
@@ -163,9 +163,9 @@ Excluding the output, the only extra state is the loop variables `i` and `j`, so
 
 ## 5. Learning Notes
 
-### Challenge 1: Why is `ret[i-1]` never accessed when `i = 0` or `i = 1`?
+### Challenge 1: Why is `res[i-1]` never accessed when `i = 0` or `i = 1`?
 
-`ret[i-1]` looks like it would go out of bounds at `i = 0`, but it is never executed there.
+`res[i-1]` looks like it would go out of bounds at `i = 0`, but it is never executed there.
 
 **Understanding Process**
 
