@@ -117,7 +117,7 @@ ALGORITHM(input)
 
     {{算法步骤}}
 
-    return result
+    return res
 ```
 
 **状态定义**
