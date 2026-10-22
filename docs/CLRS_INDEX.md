@@ -16,4 +16,10 @@ Each section gets one table:
 | [Number. Title](../Algorithms/<category>/<problem>/summary.md) | Direct / Related idea | Which step of this problem |
 ```
 
-No entries yet.
+## Chapter 8 Sorting in Linear Time
+
+### §8.1 Lower bounds for sorting
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [3863. Minimum Operations to Sort a String](../Algorithms/constructive-algorithms/3863-minimum-operations-to-sort-a-string/summary.md) | Related idea | Lemma 4's lower bound: after any single operation both endpoints are still wrong, so every strategy needs at least three operations, not just one particular sequence |
