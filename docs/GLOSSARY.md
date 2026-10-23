@@ -11,3 +11,4 @@
 | 帕斯卡法则 | Pascal's rule | 对 $`0 < k < n`$，$`\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}`$。 |
 | 自底向上填表 | bottom-up tabulation | 按依赖关系的拓扑序计算并存储子问题的值，使每个值在被使用前已经算出。 |
 | 滚动数组 | rolling array | 当每层状态只依赖上一层时，只保留一层存储并原地更新的空间优化方法。 |
+| 斐波那契数列 | Fibonacci sequence | 满足 $`F(1) = F(2) = 1`$、$`F(n) = F(n-1) + F(n-2)`$ 的整数序列。 |

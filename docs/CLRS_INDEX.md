@@ -24,6 +24,14 @@ Each section gets one table:
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Direct | Proves correctness with the outer-loop invariant "the first $`i`$ rows are correct" in the initialization, maintenance, and termination steps |
 
+## Chapter 3 Growth of Functions
+
+### §3.2 Standard notations and common functions
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | The Fibonacci recurrence is the same kind as this problem's, and the shallow-diagonal sums of Pascal's triangle are Fibonacci numbers |
+
 ## Chapter 15 Dynamic Programming
 
 ### §15.3 Elements of dynamic programming
