@@ -117,7 +117,7 @@ ALGORITHM(input)
 
     {{Algorithm steps}}
 
-    return result
+    return res
 ```
 
 **State Definitions**

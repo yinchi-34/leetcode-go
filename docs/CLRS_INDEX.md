@@ -16,4 +16,34 @@ Each section gets one table:
 | [Number. Title](../Algorithms/<category>/<problem>/summary.md) | Direct / Related idea | Which step of this problem |
 ```
 
-No entries yet.
+## Chapter 2 Getting Started
+
+### §2.1 Insertion sort
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Direct | Proves correctness with the outer-loop invariant "the first $`i`$ rows are correct" in the initialization, maintenance, and termination steps |
+
+## Chapter 3 Growth of Functions
+
+### §3.2 Standard notations and common functions
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | The Fibonacci recurrence is the same kind as this problem's, and the shallow-diagonal sums of Pascal's triangle are Fibonacci numbers |
+
+## Chapter 15 Dynamic Programming
+
+### §15.3 Elements of dynamic programming
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | Each entry of a row is reused by two positions in the next row; filling rows in increasing order computes values before use |
+
+## Appendix C Counting and Probability
+
+### C.1 Counting
+
+| Problem | Relation | How It Appears Here |
+|---|---|---|
+| [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | Proves $`P(i, j) = \binom{i}{j}`$ and uses it for the $`\binom{29}{14}`$ overflow bound |
