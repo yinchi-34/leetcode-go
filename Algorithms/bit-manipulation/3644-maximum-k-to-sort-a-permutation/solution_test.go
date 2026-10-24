@@ -22,7 +22,17 @@ func TestSortPermutation(t *testing.T) {
 		},
 		{
 			name:     "misplaced_zero",
-			nums:     []int{4, 3, 2, 1, 0},
+			nums:     []int{3, 2, 1, 0},
+			excepted: 0,
+		},
+		{
+			name:     "no_common_bits",
+			nums:     []int{0, 2, 3, 1},
+			excepted: 0,
+		},
+		{
+			name:     "pairwise_common_bits_all_zero",
+			nums:     []int{0, 1, 2, 5, 4, 6, 3, 7},
 			excepted: 0,
 		},
 		{
@@ -36,24 +46,19 @@ func TestSortPermutation(t *testing.T) {
 			excepted: 2,
 		},
 		{
-			name:     "no_common_bits",
-			nums:     []int{0, 2, 3, 1},
-			excepted: 0,
-		},
-		{
 			name:     "multiple_common_bits",
 			nums:     []int{0, 1, 2, 7, 4, 5, 6, 3},
 			excepted: 3,
 		},
 		{
-			name:     "fixed_and_value",
-			nums:     []int{0, 1, 2, 3, 4, 6, 5, 7},
-			excepted: 4,
+			name:     "multiple_misplaced",
+			nums:     []int{0, 1, 2, 7, 4, 3, 6, 5},
+			excepted: 1,
 		},
 		{
-			name:     "fixed_zero_as_hub",
-			nums:     []int{0, 1, 2, 5, 4, 6, 3, 7},
-			excepted: 0,
+			name:     "answer_in_place",
+			nums:     []int{0, 1, 2, 3, 4, 6, 5, 7},
+			excepted: 4,
 		},
 	}
 

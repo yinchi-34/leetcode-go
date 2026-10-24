@@ -176,7 +176,7 @@ It is tempting to think that in-place elements are irrelevant, and to look for s
 
 **Understanding Process**
 
-Consider the test `fixed_zero_as_hub`: in `[0,1,2,5,4,6,3,7]` the misplaced values are $`\{5, 6, 3\}`$, with pairwise ANDs $`5 \mathbin{\&} 6 = 4`$, $`5 \mathbin{\&} 3 = 1`$, and $`6 \mathbin{\&} 3 = 2`$, none of which equals $`M = 0`$. What works is borrowing the in-place 0: its AND with anything is 0, so swap it out to act as an "empty slot", carry the misplaced elements home one by one, and 0 returns to its place at the end.
+Consider the test `pairwise_common_bits_all_zero`: in `[0,1,2,5,4,6,3,7]` the misplaced values are $`\{5, 6, 3\}`$, with pairwise ANDs $`5 \mathbin{\&} 6 = 4`$, $`5 \mathbin{\&} 3 = 1`$, and $`6 \mathbin{\&} 3 = 2`$, none of which equals $`M = 0`$. What works is borrowing the in-place 0: its AND with anything is 0, so swap it out to act as an "empty slot", carry the misplaced elements home one by one, and 0 returns to its place at the end.
 
 This also explains why in-place elements **do not affect the answer**: the upper bound comes only from "misplaced elements must move", and in-place elements can stay put, so they impose no constraint; sufficiency, meanwhile, lets them leave temporarily and come back.
 
