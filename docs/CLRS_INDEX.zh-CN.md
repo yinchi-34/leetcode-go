@@ -23,6 +23,7 @@
 | 题目 | 关联程度 | 本题中的体现 |
 |---|---|---|
 | [118. 杨辉三角](../Algorithms/simulation/0118-pascals-triangle/summary.zh-CN.md) | 直接对应 | 用“前 $`i`$ 行已正确”的外层循环不变式，按初始化、保持、终止三步证明 |
+| [3644. 排序排列](../Algorithms/bit-manipulation/3644-maximum-k-to-sort-a-permutation/summary.zh-CN.md) | 直接对应 | 用“`res` 是前缀错位值的按位与”的不变式，按初始化、保持、终止三步证明代码算出 $`M`$ |
 
 ## 第 3 章 函数的增长
 

@@ -46,8 +46,13 @@ func TestSortPermutation(t *testing.T) {
 			excepted: 3,
 		},
 		{
-			name:     "multiple_no_common_bits",
-			nums:     []int{0, 1, 2, 3, 7, 5, 6, 4, 3},
+			name:     "fixed_and_value",
+			nums:     []int{0, 1, 2, 3, 4, 6, 5, 7},
+			excepted: 4,
+		},
+		{
+			name:     "fixed_zero_as_hub",
+			nums:     []int{0, 1, 2, 5, 4, 6, 3, 7},
 			excepted: 0,
 		},
 	}
