@@ -21,6 +21,11 @@ func TestSortPermutation(t *testing.T) {
 			excepted: 0,
 		},
 		{
+			name:     "zero_in_transposition",
+			nums:     []int{1, 0, 2, 3},
+			excepted: 0,
+		},
+		{
 			name:     "misplaced_zero",
 			nums:     []int{3, 2, 1, 0},
 			excepted: 0,
