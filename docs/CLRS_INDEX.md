@@ -23,6 +23,7 @@ Each section gets one table:
 | Problem | Relation | How It Appears Here |
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Direct | Proves correctness with the outer-loop invariant "the first $`i`$ rows are correct" in the initialization, maintenance, and termination steps |
+| [3644. Maximum K to Sort a Permutation](../Algorithms/bit-manipulation/3644-maximum-k-to-sort-a-permutation/summary.md) | Direct | Proves the code computes $`M`$ with the invariant "`res` is the AND of the support elements in the prefix" in the initialization, maintenance, and termination steps |
 
 ## Chapter 3 Growth of Functions
 

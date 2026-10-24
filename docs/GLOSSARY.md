@@ -12,3 +12,8 @@
 | 自底向上填表 | bottom-up tabulation | 按依赖关系的拓扑序计算并存储子问题的值，使每个值在被使用前已经算出。 |
 | 滚动数组 | rolling array | 当每层状态只依赖上一层时，只保留一层存储并原地更新的空间优化方法。 |
 | 斐波那契数列 | Fibonacci sequence | 满足 $`F(1) = F(2) = 1`$、$`F(n) = F(n-1) + F(n-2)`$ 的整数序列。 |
+| 子掩码 | submask | 若 $`x \mathbin{\&} y = x`$，即 $`x`$ 的每个为 1 的二进制位在 $`y`$ 中也为 1，则称 $`x`$ 是 $`y`$ 的子掩码。 |
+| 星形对换 | star transposition | 都包含同一个固定元素（枢纽）的对换；只用这类对换就能实现任意排列。 |
+| 单位元 | identity element | 对二元运算 $`\circ`$，满足 $`e \circ x = x \circ e = x`$ 的元素 $`e`$，例如按位与的全 1。 |
+| 不动点 | fixed point | 置换 $`\pi`$ 中满足 $`\pi(i) = i`$ 的元素 $`i`$。 |
+| 支撑集 | support | 置换 $`\pi`$ 中所有非不动点组成的集合，$`\mathrm{supp}(\pi) = \{i : \pi(i) \ne i\}`$。 |
