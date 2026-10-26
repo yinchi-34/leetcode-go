@@ -24,6 +24,7 @@
 |---|---|---|
 | [118. 杨辉三角](../Algorithms/simulation/0118-pascals-triangle/summary.zh-CN.md) | 直接对应 | 用“前 $`i`$ 行已正确”的外层循环不变式，按初始化、保持、终止三步证明 |
 | [3644. 排序排列](../Algorithms/bit-manipulation/3644-maximum-k-to-sort-a-permutation/summary.zh-CN.md) | 直接对应 | 用“`res` 是前缀中支撑集元素的按位与”的不变式，按初始化、保持、终止三步证明代码算出 $`M`$ |
+| [856. 括号的分数](../data-structures/stack/0856-score-of-parentheses/summary.zh-CN.md) | 直接对应 | 解法一用“`st[k]` $`= \mathrm{score}(B_k)`$”、解法二用“`res` 是前缀内原子对的贡献和”，分别按初始化、保持、终止三步证明 |
 
 ## 第 3 章 函数的增长
 
@@ -32,6 +33,14 @@
 | 题目 | 关联程度 | 本题中的体现 |
 |---|---|---|
 | [118. 杨辉三角](../Algorithms/simulation/0118-pascals-triangle/summary.zh-CN.md) | 相关思想 | 斐波那契递推与本题递推同类，且杨辉三角浅对角线之和等于斐波那契数 |
+
+## 第 10 章 基本数据结构
+
+### §10.1 栈和队列
+
+| 题目 | 关联程度 | 本题中的体现 |
+|---|---|---|
+| [856. 括号的分数](../data-structures/stack/0856-score-of-parentheses/summary.zh-CN.md) | 直接对应 | 解法一用 PUSH 打开一层、POP 闭合一层；平衡串保证 POP 前栈非空，不会下溢 |
 
 ## 第 15 章 动态规划
 

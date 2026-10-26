@@ -17,3 +17,12 @@
 | 单位元 | identity element | 对二元运算 $`\circ`$，满足 $`e \circ x = x \circ e = x`$ 的元素 $`e`$，例如按位与的全 1。 |
 | 不动点 | fixed point | 置换 $`\pi`$ 中满足 $`\pi(i) = i`$ 的元素 $`i`$。 |
 | 支撑集 | support | 置换 $`\pi`$ 中所有非不动点组成的集合，$`\mathrm{supp}(\pi) = \{i : \pi(i) \ne i\}`$。 |
+| 栈 | stack | 支持 push、pop 的动态集合，pop 总是删除最近插入且尚未删除的元素。 |
+| 后进先出 | last-in first-out (LIFO) | 最后插入的元素最先被删除的存取顺序。 |
+| 下溢 | underflow | 对空栈执行 pop。 |
+| 上溢 | overflow | 数组实现的栈中，元素数超过数组容量。 |
+| 摊还代价 | amortized cost | 一列操作的总代价除以操作次数所得的每次操作的平均代价，不涉及概率。 |
+| 单调栈 | monotonic stack | 栈中元素对应的值从栈底到栈顶保持单调的栈，用于查找每个元素左侧或右侧第一个更大（或更小）的元素。 |
+| 结构归纳 | structural induction | 对由文法或递归规则生成的对象，证明性质对基本对象成立且被每条生成规则保持的归纳法。 |
+| 贡献法 | contribution technique | 把答案写成各基本单元贡献之和，分别计算每个单元的贡献再求和的方法。 |
+| 原子对 | atomic pair | 括号串中相邻的一对 `()`。 |
