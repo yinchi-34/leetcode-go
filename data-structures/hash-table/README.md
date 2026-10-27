@@ -92,7 +92,7 @@ Each pattern lists what the table stores and when it applies. New problems are a
 
 | Problem | Location | Pattern | Notes |
 |---|---|---|---|
-| [128. Longest Consecutive Sequence](./0128-longest-consecutive-sequence/) | This directory | 3.1 Membership; 3.4 Chain heads | The set holds all elements; extend only from `x` with `x-1` absent, for $`O(n)`$ total time |
+| [128. Longest Consecutive Sequence](./0128-longest-consecutive-sequence/summary.md) | This directory | 3.1 Membership; 3.4 Chain heads | The set holds all elements; extend only from `x` with `x-1` absent, for $`O(n)`$ total time |
 
 ## 6. CLRS Connections
 

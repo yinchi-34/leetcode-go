@@ -17,3 +17,7 @@
 | 单位元 | identity element | 对二元运算 $`\circ`$，满足 $`e \circ x = x \circ e = x`$ 的元素 $`e`$，例如按位与的全 1。 |
 | 不动点 | fixed point | 置换 $`\pi`$ 中满足 $`\pi(i) = i`$ 的元素 $`i`$。 |
 | 支撑集 | support | 置换 $`\pi`$ 中所有非不动点组成的集合，$`\mathrm{supp}(\pi) = \{i : \pi(i) \ne i\}`$。 |
+| 散列集合 | hash set | 只存关键字、不带附加数据的散列表，支持期望 $`O(1)`$ 的插入与存在性查询。 |
+| 极大连续段 | maximal run | 整数集合 $`S`$ 的子集 $`\{h, \ldots, h+L-1\}`$，满足 $`h-1 \notin S`$ 且 $`h+L \notin S`$，两端都不能再延长。 |
+| 段首 | run head | 满足 $`h \in S`$ 且 $`h-1 \notin S`$ 的值 $`h`$，即某个极大连续段的最小元素。 |
+| 聚合分析 | aggregate analysis | 先界定 $`n`$ 个操作的总代价 $`T(n)`$，再以 $`T(n)/n`$ 作为每个操作摊还代价的分析方法。 |
