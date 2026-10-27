@@ -230,7 +230,6 @@ Section numbers follow CLRS, 3rd edition. Relation is either "Direct" or "Relate
 |---|---|---|---|
 | Stack | §10.1 Stacks and queues | Direct | A Go slice implements PUSH and POP and holds cells that have been discovered and are waiting to be processed |
 | Representations of graphs | §22.1 Representations of graphs | Related idea | Views the grid as a graph whose vertices are land cells and enumerates neighbors from coordinate offsets instead of an explicit adjacency list |
-| Breadth-first search | §22.2 Breadth-first search | Related idea | Same structure as CLRS's BFS: mark a vertex as soon as it is discovered (gray in BFS), then add it to the pending set; with a stack instead of a queue, the search still finds the whole connected component |
 | Depth-first search | §22.3 Depth-first search | Related idea | Replaces recursion with a stack, but pushes all undiscovered neighbors at once on each pop, so the visiting order is not guaranteed to match DFS-VISIT; see Challenge 2 |
 
 ## 7. Review Log

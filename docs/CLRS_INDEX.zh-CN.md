@@ -66,12 +66,6 @@
 | [3619. 总价值可以被 K 整除的岛屿数目（递归 DFS）](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/recursive-dfs/summary.zh-CN.md) | 相关思想 | 4.1 把网格看成以陆地格为顶点的图，用方向数组即时枚举邻居，代替显式的邻接表 |
 | [3619. 总价值可以被 K 整除的岛屿数目（显式栈 DFS）](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.zh-CN.md) | 相关思想 | 把网格看成以陆地格为顶点的图，用坐标偏移即时枚举邻居，代替显式的邻接表 |
 
-### §22.2 广度优先搜索
-
-| 题目 | 关联程度 | 本题中的体现 |
-|---|---|---|
-| [3619. 总价值可以被 K 整除的岛屿数目（显式栈 DFS）](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.zh-CN.md) | 相关思想 | 结构与 CLRS 的 BFS 相同：发现时立刻标记（BFS 中涂成灰色），再放入待处理集合；把队列换成栈后，仍然能找出整个连通分量 |
-
 ### §22.3 深度优先搜索
 
 | 题目 | 关联程度 | 本题中的体现 |

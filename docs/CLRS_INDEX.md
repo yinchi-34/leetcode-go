@@ -66,12 +66,6 @@ Each section gets one table:
 | [3619. Count Islands With Total Value Divisible by K (recursive DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/recursive-dfs/summary.md) | Related idea | 4.1 views the grid as a graph whose vertices are land cells and enumerates neighbors with a direction array instead of an explicit adjacency list |
 | [3619. Count Islands With Total Value Divisible by K (explicit-stack DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.md) | Related idea | Views the grid as a graph whose vertices are land cells and enumerates neighbors from coordinate offsets instead of an explicit adjacency list |
 
-### §22.2 Breadth-first search
-
-| Problem | Relation | How It Appears Here |
-|---|---|---|
-| [3619. Count Islands With Total Value Divisible by K (explicit-stack DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.md) | Related idea | Same structure as CLRS's BFS: mark a vertex as soon as it is discovered (gray in BFS), then add it to the pending set; with a stack instead of a queue, the search still finds the whole connected component |
-
 ### §22.3 Depth-first search
 
 | Problem | Relation | How It Appears Here |
