@@ -1,6 +1,6 @@
 package solution
 
-func countIslands(grid [][]int, k int) (ans int) {
+func CountIslands(grid [][]int, k int) (ans int) {
 	dirs := []struct{ x, y int }{{0, -1}, {0, 1}, {-1, 0}, {1, 0}}
 	m, n := len(grid), len(grid[0])
 

@@ -16,7 +16,7 @@
 - **主分类**：Graph Search（图搜索）
 - **技术标签**：`图搜索`、`深度优先搜索`、`连通分量`、`递归`、`矩阵`
 - **代码**：[solution.go](./solution.go)
-- **测试**：[solution_test.go](./solution_test.go)，用例见 [testcases.go](../testcases/testcases.go)
+- **测试**：[solution_test.go](../solution_test.go)（放在上一级目录，两种解法共用）
 
 ### 难度评分
 
@@ -202,7 +202,7 @@ Go 的 goroutine 栈会按需增长（64 位平台默认上限 1 GB），所以�
 
 ### 4.6 测试设计（Test Design）
 
-两种解法共用 [testcases.go](../testcases/testcases.go) 中的用例。每个用例调用前都用 `CloneGrid` 复制一份网格，因为本解法会把访问过的格子置 0。
+两种解法共用上一级目录的 [solution_test.go](../solution_test.go)，同一组用例对两个解法各跑一遍。每次调用前都用 `cloneGrid` 复制一份网格，因为本解法会把访问过的格子置 0。两个解法的函数都命名为首字母大写的 `CountIslands`，这样上一级目录的测试才能调用它们。
 
 | 用例 | 预期 | 检查的内容 |
 |---|---|---|

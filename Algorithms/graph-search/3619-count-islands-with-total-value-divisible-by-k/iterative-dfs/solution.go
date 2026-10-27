@@ -1,6 +1,6 @@
 package solution
 
-func countIslands(grid [][]int, k int) int {
+func CountIslands(grid [][]int, k int) int {
 	m, n := len(grid), len(grid[0])
 
 	visited := make([][]bool, m)

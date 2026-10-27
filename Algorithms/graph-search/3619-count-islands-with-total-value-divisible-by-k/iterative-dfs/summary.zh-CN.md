@@ -19,7 +19,7 @@
 - **辅助分类**：Stack（栈）
 - **技术标签**：`图搜索`、`栈`、`深度优先搜索`、`连通分量`、`矩阵`
 - **代码**：[solution.go](./solution.go)
-- **测试**：[solution_test.go](./solution_test.go)，用例见 [testcases.go](../testcases/testcases.go)
+- **测试**：[solution_test.go](../solution_test.go)（放在上一级目录，两种解法共用）
 
 ### 难度评分
 
@@ -173,7 +173,7 @@ $`T`$ 中每个格子的每个陆地邻居都已入过栈，即属于 $`T \cup P
 
 ### 4.6 测试设计（Test Design）
 
-两种解法共用 [testcases.go](../testcases/testcases.go) 中的用例，各用例检查的内容见[递归版 4.6 节](../recursive-dfs/summary.zh-CN.md#46-测试设计test-design)。
+两种解法共用上一级目录的 [solution_test.go](../solution_test.go)，各用例检查的内容见[递归版 4.6 节](../recursive-dfs/summary.zh-CN.md#46-测试设计test-design)。
 
 对本解法特别有用的是 `square_island_has_cycle`（$`2 \times 2`$ 全为 1，`k = 4`）。做过变异检验：把标记改到出栈时、且出栈时不检查是否已访问，格子 $`(1, 0)`$ 会被 $`(0, 0)`$ 和 $`(1, 1)`$ 各压栈一次，`total` 算成 5，这个用例就会失败。其余用例在这个变异下仍然通过，因为它们的岛屿要么没有环，要么每个格子的值都是 $`k`$ 的倍数，重复累加后仍能整除。
 

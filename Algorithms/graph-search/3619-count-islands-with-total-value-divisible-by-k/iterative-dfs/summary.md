@@ -19,7 +19,7 @@ The problem statement, example, and constraints are the same as in the recursive
 - **Secondary Category**: Stack
 - **Tags**: `Graph Search`, `Stack`, `Depth-First Search`, `Connected Components`, `Matrix`
 - **Code**: [solution.go](./solution.go)
-- **Tests**: [solution_test.go](./solution_test.go), with cases in [testcases.go](../testcases/testcases.go)
+- **Tests**: [solution_test.go](../solution_test.go) (in the parent directory, shared by both solutions)
 
 ### Difficulty Rating
 
@@ -173,7 +173,7 @@ The same as the recursive version: an island sum is at most $`10^{11}`$ and need
 
 ### 4.6 Test Design
 
-Both solutions share the cases in [testcases.go](../testcases/testcases.go); what each case checks is listed in [Section 4.6 of the recursive version](../recursive-dfs/summary.md#46-test-design).
+Both solutions share [solution_test.go](../solution_test.go) in the parent directory; what each case checks is listed in [Section 4.6 of the recursive version](../recursive-dfs/summary.md#46-test-design).
 
 The case that matters most for this solution is `square_island_has_cycle` (a $`2 \times 2`$ grid of 1s with `k = 4`). A mutation check was run: if marking is moved to pop time and pop does not check whether the cell was already visited, cell $`(1, 0)`$ is pushed once by $`(0, 0)`$ and once by $`(1, 1)`$, `total` becomes 5, and this case fails. The other cases still pass under this mutation, because their islands either have no cycle or have every cell value a multiple of $`k`$, so the repeated additions remain divisible.
 

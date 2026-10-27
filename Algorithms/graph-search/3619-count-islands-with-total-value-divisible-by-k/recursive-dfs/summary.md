@@ -16,7 +16,7 @@ This problem has two solutions in two directories that share one set of test cas
 - **Primary Category**: Graph Search
 - **Tags**: `Graph Search`, `Depth-First Search`, `Connected Components`, `Recursion`, `Matrix`
 - **Code**: [solution.go](./solution.go)
-- **Tests**: [solution_test.go](./solution_test.go), with cases in [testcases.go](../testcases/testcases.go)
+- **Tests**: [solution_test.go](../solution_test.go) (in the parent directory, shared by both solutions)
 
 ### Difficulty Rating
 
@@ -202,7 +202,7 @@ An island sum is at most $`10^5 \times 10^6 = 10^{11}`$, which is larger than $`
 
 ### 4.6 Test Design
 
-Both solutions share the cases in [testcases.go](../testcases/testcases.go). Each case copies the grid with `CloneGrid` before the call, because this solution sets visited cells to 0.
+Both solutions share [solution_test.go](../solution_test.go) in the parent directory, which runs the same cases against each solution. Each call gets a copy of the grid from `cloneGrid`, because this solution sets visited cells to 0. Both solutions name the function `CountIslands` with a capital letter so that the test in the parent directory can call them.
 
 | Case | Expected | What It Checks |
 |---|---|---|
