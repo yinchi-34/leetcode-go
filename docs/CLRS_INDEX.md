@@ -65,3 +65,4 @@ Each section gets one table:
 | Problem | Relation | How It Appears Here |
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | Proves $`P(i, j) = \binom{i}{j}`$ and uses it for the $`\binom{29}{14}`$ overflow bound |
+| [3963. Create Grid With Exactly One Path](../Algorithms/constructive-algorithms/3963-create-grid-with-exactly-one-path/summary.md) | Related idea | The test uses $`\binom{4}{2} = 6`$ paths for the all-free $`3 \times 3`$ grid to check the validator `countPaths` |
