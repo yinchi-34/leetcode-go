@@ -22,14 +22,14 @@ Use the [shared glossary](../../../docs/GLOSSARY.md) and follow the repository's
 
 **Four-Dimensional Rating — L-Shaped Corridor Construction**
 
-- Evaluation Scope: $`1 \le m, n \le 25`$; time $`O(mn)`$, extra space $`O(n)`$ excluding the output; Go implementation.
+- Evaluation Scope: $`1 \le m, n \le 25`$; time $`O(m + n)`$, space $`O(m + n)`$ including the output, since the rows share one string; Go implementation.
 
 | Dimension | Score | Reason |
 |---|---|---|
 | Modeling Difficulty | 2 | One transformation: turn "exactly one path" into "leave a single corridor of width 1", then pick a corridor that is easy to write (first row + last column) |
 | Knowledge Prerequisites | 1 | Only 2D grid indices, string concatenation, and loops |
 | Correctness Reasoning Difficulty | 2 | Existence is checked directly; uniqueness only needs to look at which column the path's first downward move is in, a simple local argument |
-| Implementation Difficulty | 1 | Each row is either all `.` or `n-1` copies of `#` followed by `.`; $`m = 1`$ and $`n = 1`$ need no special case |
+| Implementation Difficulty | 1 | Only two kinds of rows: the all-`.` first row and the `n-1` copies of `#` followed by `.` for the rest, built once and reused; $`m = 1`$ and $`n = 1`$ need no special case |
 
 Ratings follow the repository's [RATING.md](../../../docs/RATING.md). Each dimension is rated independently, and no total score is computed.
 
@@ -73,8 +73,9 @@ CREATE-GRID(m, n)
     res ← array of m strings
     res[0] ← n copies of '.'
 
+    row ← (n - 1) copies of '#' followed by one '.'
     for i ← 1 to m - 1
-        res[i] ← (n - 1) copies of '#' followed by one '.'
+        res[i] ← row
 
     return res
 ```
@@ -87,8 +88,10 @@ F = \{(0, j) : 0 \le j < n\} \cup \{(i, n-1) : 0 \le i < m\}
 
 **State Definitions**
 
+- `res`: the result grid, `grid` in `solution.go`.
 - `res[0]`: the first row, all free.
-- `res[i]` ($`i \ge 1`$): only the last column $`n-1`$ is free.
+- `row`: the content of every row after the first; only the last column $`n-1`$ is free. It is built once.
+- `res[i]` ($`i \ge 1`$): all equal to `row`.
 
 ### 4.4 Correctness
 
@@ -133,13 +136,21 @@ For all $`1 \le m, n \le 25`$, the constructed grid has a valid path, and $`P^*`
 
 Let the grid have $`m`$ rows and $`n`$ columns.
 
-**Time Complexity: O(mn)**
+**Time Complexity: O(m + n)**
 
-The first row produces $`n`$ characters. Each of the other $`m-1`$ rows produces $`n-1`$ copies of `#` and then concatenates them into a new string of length $`n`$, which is $`O(n)`$ per row. The total is $`O(mn)`$. The output itself has $`mn`$ characters, so any algorithm needs $`\Omega(mn)`$ time just to write the answer.
+- `make([]string, m)` allocates and zeroes $`m`$ string headers, $`O(m)`$.
+- The first row, `strings.Repeat(".", n)`, writes $`n`$ characters, $`O(n)`$.
+- `row` is built by `strings.Repeat` producing $`n-1`$ copies of `#` and then concatenating a new string of length $`n`$, $`O(n)`$.
+- The loop runs $`m-1`$ times; each iteration only assigns `row`'s string header (pointer and length) to `grid[i]` without copying characters, $`O(1)`$.
 
-**Space Complexity: O(mn) for the output, O(n) extra excluding the output**
+The total is $`O(m + n)`$. Note that the $`mn`$ characters are never written one by one: every row after the first shares the same character data. Calling `strings.Repeat` again for every row would make the time $`O(mn)`$.
 
-The output array takes $`O(mn)`$. In Go, `strings.Repeat("#", n-1) + "."` first builds a temporary string of length $`n-1`$ and then a new concatenated string. The temporary string can be reclaimed after that iteration, so the extra space at any moment is $`O(n)`$.
+**Space Complexity: O(m + n), including the output**
+
+- `grid` itself is $`m`$ string headers, $`O(m)`$.
+- There are only two blocks of character data: $`n`$ bytes for the first row and $`n`$ bytes for `row`; the temporary string of length $`n-1`$ made while building `row` can be reclaimed afterward.
+
+So the total space is $`O(m + n)`$. This relies on Go strings being immutable: several elements sharing one string cannot affect each other. If a caller converts a row to `[]byte` and modifies it, the conversion copies the data, so that is still safe.
 
 ### 4.6 Test Design
 
@@ -183,6 +194,16 @@ Tests should check whether the output satisfies the problem's condition, not whe
 
 **Transferable Insight:** For construction problems and problems that accept any valid answer, write the test as a validator. The validator's rule should be simpler than the algorithm under test and easy to confirm.
 
+### Challenge 3: Is it safe for the rows to share one string?
+
+`solution.go` builds `row` once and assigns it to rows $`1`$ through $`m-1`$. One might worry: if one row is changed, do the others change too?
+
+**Understanding Process**
+
+Go's `string` is immutable. Assignment copies only the string header (a pointer to the character data and a length), not the data, and no operation can modify that data in place. So rows sharing the same data cannot affect each other, and $`m-1`$ copies are saved, bringing time and space from $`O(mn)`$ down to $`O(m + n)`$. If the grid were `[][]byte`, the same code would make every row share one backing array, and changing one row would change all of them; then each row would need its own allocation.
+
+**Transferable Insight:** Immutable values can be shared freely; for mutable slices and arrays, first check whether a deep copy is needed.
+
 ## 6. Key Takeaways
 
 This problem yields the following reusable methods:
@@ -191,6 +212,7 @@ This problem yields the following reusable methods:
 2. **Uniqueness by First Deviation**: Here, comparing any path with $`P^*`$ at their first difference shows that step must land on an obstacle. This fits proofs that a path, sequence, or plan is unique. It requires showing that the deviating step always violates a constraint.
 3. **Validator-Based Testing**: Here, `checkGrid` checks the size, the character set, and the path count, independent of any specific answer. This fits problems with non-unique answers. It requires that the condition can be checked efficiently and that the validator itself is tested.
 4. **Grid Path Counting DP**: Used here only in the tests, $`dp[i][j] = dp[i-1][j] + dp[i][j-1]`$. This fits counting right/down paths in a grid. Watch for overflow when counts can be large; here the grid is at most $`25 \times 25`$ and the path counts in the tests are small.
+5. **Sharing Immutable Values**: Here, the $`m-1`$ rows after the first share one string `row`, bringing time and space from $`O(mn)`$ down to $`O(m + n)`$. This fits problems whose output contains a lot of repeated content. It requires the shared value to be immutable, such as a Go `string`; slices like `[]byte` and `[]int` share their backing array and cannot be shared this way.
 
 ### CLRS Connections
 
