@@ -65,3 +65,4 @@
 | 题目 | 关联程度 | 本题中的体现 |
 |---|---|---|
 | [118. 杨辉三角](../Algorithms/simulation/0118-pascals-triangle/summary.zh-CN.md) | 相关思想 | 证明 $`P(i, j) = \binom{i}{j}`$，并据此得出 $`\binom{29}{14}`$ 的溢出上界 |
+| [3963. 构造恰好一条路径的网格](../Algorithms/constructive-algorithms/3963-create-grid-with-exactly-one-path/summary.zh-CN.md) | 相关思想 | 测试中全空 $`3 \times 3`$ 网格的路径数取 $`\binom{4}{2} = 6`$，用来检验验证器 `countPaths` |
