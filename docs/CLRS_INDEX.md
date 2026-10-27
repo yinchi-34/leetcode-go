@@ -24,6 +24,7 @@ Each section gets one table:
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Direct | Proves correctness with the outer-loop invariant "the first $`i`$ rows are correct" in the initialization, maintenance, and termination steps |
 | [3644. Maximum K to Sort a Permutation](../Algorithms/bit-manipulation/3644-maximum-k-to-sort-a-permutation/summary.md) | Direct | Proves the code computes $`M`$ with the invariant "`res` is the AND of the support elements in the prefix" in the initialization, maintenance, and termination steps |
+| [128. Longest Consecutive Sequence](../data-structures/hash-table/0128-longest-consecutive-sequence/summary.md) | Direct | Lemma 1's inner invariant and the outer invariant "`res` is the longest run among processed heads" are each proved by initialization, maintenance, and termination |
 
 ## Chapter 3 Growth of Functions
 
@@ -33,13 +34,13 @@ Each section gets one table:
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | The Fibonacci recurrence is the same kind as this problem's, and the shallow-diagonal sums of Pascal's triangle are Fibonacci numbers |
 
-## Chapter 10 Elementary Data Structures
+## Chapter 11 Hash Tables
 
-### §10.1 Stacks and queues
+### §11.2 Hash tables
 
 | Problem | Relation | How It Appears Here |
 |---|---|---|
-| [3619. Count Islands With Total Value Divisible by K (explicit-stack DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.md) | Direct | A Go slice implements PUSH and POP and holds cells that have been discovered and are waiting to be processed |
+| [128. Longest Consecutive Sequence](../data-structures/hash-table/0128-longest-consecutive-sequence/summary.md) | Direct | Insertion and membership queries on `numSet` take expected $`O(1)`$, which the overall expected $`O(n)`$ relies on |
 
 ## Chapter 15 Dynamic Programming
 
@@ -49,29 +50,13 @@ Each section gets one table:
 |---|---|---|
 | [118. Pascal's Triangle](../Algorithms/simulation/0118-pascals-triangle/summary.md) | Related idea | Each entry of a row is reused by two positions in the next row; filling rows in increasing order computes values before use |
 
-## Chapter 21 Data Structures for Disjoint Sets
+## Chapter 17 Amortized Analysis
 
-### §21.1 Disjoint-set operations
-
-| Problem | Relation | How It Appears Here |
-|---|---|---|
-| [3619. Count Islands With Total Value Divisible by K (recursive DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/recursive-dfs/summary.md) | Related idea | CLRS uses disjoint sets in this section to find the connected components of an undirected graph; this problem finds components with DFS instead and sums each component's weights along the way |
-
-## Chapter 22 Elementary Graph Algorithms
-
-### §22.1 Representations of graphs
+### §17.1 Aggregate analysis
 
 | Problem | Relation | How It Appears Here |
 |---|---|---|
-| [3619. Count Islands With Total Value Divisible by K (recursive DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/recursive-dfs/summary.md) | Related idea | 4.1 views the grid as a graph whose vertices are land cells and enumerates neighbors with a direction array instead of an explicit adjacency list |
-| [3619. Count Islands With Total Value Divisible by K (explicit-stack DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.md) | Related idea | Views the grid as a graph whose vertices are land cells and enumerates neighbors from coordinate offsets instead of an explicit adjacency list |
-
-### §22.3 Depth-first search
-
-| Problem | Relation | How It Appears Here |
-|---|---|---|
-| [3619. Count Islands With Total Value Divisible by K (recursive DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/recursive-dfs/summary.md) | Direct | `DFS` sets a cell to 0 as soon as it is entered, like coloring a vertex gray in CLRS; unvisited neighbors are visited recursively; the outer scan over all cells is like the DFS main procedure calling DFS-VISIT on every white vertex |
-| [3619. Count Islands With Total Value Divisible by K (explicit-stack DFS)](../Algorithms/graph-search/3619-count-islands-with-total-value-divisible-by-k/iterative-dfs/summary.md) | Related idea | Replaces recursion with a stack, but pushes all undiscovered neighbors at once on each pop, so the visiting order is not guaranteed to match DFS-VISIT; see Challenge 2 |
+| [128. Longest Consecutive Sequence](../data-structures/hash-table/0128-longest-consecutive-sequence/summary.md) | Direct | The inner `while` runs $`m - (\text{number of heads}) \le m`$ times in total, counted over the whole algorithm rather than per loop |
 
 ## Appendix C Counting and Probability
 
