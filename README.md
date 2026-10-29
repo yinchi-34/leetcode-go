@@ -13,8 +13,6 @@ Go solutions and learning notes for LeetCode, organized by algorithm and data st
 - **Where the difficulty lies**: separate ratings for modeling, knowledge prerequisites, correctness reasoning, and implementation, with reasons for each score.
 - **What transfers to other problems**: reusable methods and the conditions under which they apply.
 
-Notes are added gradually. Some problems currently have only code and tests, or notes in one language.
-
 See the [problem index](docs/PROBLEMS.md) for the full list.
 
 ## Reading a Problem
