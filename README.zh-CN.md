@@ -1,5 +1,9 @@
 # leetcode-go
 
+[![Go](https://img.shields.io/badge/Go-1.22-00ADD8?logo=go&logoColor=white)](go.mod)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
+[![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey)](LICENSE-docs)
+
 [English](README.md) | 简体中文
 
 用 Go 刷 LeetCode 的代码与学习笔记，按算法和数据结构分类整理。题解记录：

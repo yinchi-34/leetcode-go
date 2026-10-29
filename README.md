@@ -1,5 +1,9 @@
 # leetcode-go
 
+[![Go](https://img.shields.io/badge/Go-1.22-00ADD8?logo=go&logoColor=white)](go.mod)
+[![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
+[![Docs: CC BY 4.0](https://img.shields.io/badge/docs-CC%20BY%204.0-lightgrey)](LICENSE-docs)
+
 English | [简体中文](README.zh-CN.md)
 
 Go solutions and learning notes for LeetCode, organized by algorithm and data structure. The problem notes record:
