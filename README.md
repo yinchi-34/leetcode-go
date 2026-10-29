@@ -15,6 +15,8 @@ Go solutions and learning notes for LeetCode, organized by algorithm and data st
 
 Notes are added gradually. Some problems currently have only code and tests, or notes in one language.
 
+See the [problem index](docs/PROBLEMS.md) for the full list.
+
 ## Reading a Problem
 
 The [problem-note templates](templates/) use the following structure. Read the sections that match your current needs:
@@ -53,6 +55,8 @@ Browse [algorithms](Algorithms/), [data structures](data-structures/), or [intro
 │   ├── RATING.zh-CN.md          # Rating criteria in Chinese
 │   ├── CLRS_INDEX.md            # CLRS reverse index in English
 │   ├── CLRS_INDEX.zh-CN.md      # CLRS reverse index in Chinese
+│   ├── PROBLEMS.md              # Problem index in English
+│   ├── PROBLEMS.zh-CN.md        # Problem index in Chinese
 │   ├── GLOSSARY.md             # Shared Chinese–English glossary
 │   ├── GITHUB_MATH.md          # GitHub math conventions
 │   ├── PROMPT.zh-CN.md         # Prompt for writing summaries (Chinese)
@@ -81,7 +85,7 @@ The first command tests all packages; the second tests one category.
 2. Add `solution.go` and `solution_test.go`, both using `package solution`. Test the examples, boundary cases, and cases that exercise the key branches of the algorithm.
 3. When writing notes, copy the [English template](templates/summary.md) and [Chinese template](templates/summary.zh-CN.md) into the problem directory. Change `../docs/` to `../../../docs/` in the copied files, then replace the placeholders and remove the copying instructions in the opening comment.
 4. Rate the solution using the [rating criteria](docs/RATING.md), stating its constraints and target complexity. Keep the facts, scores, and mathematical meaning consistent between the two languages.
-5. Check terminology against the [shared glossary](docs/GLOSSARY.md) and mathematical notation against the [GitHub math conventions](docs/GITHUB_MATH.md). Update the [CLRS index](docs/CLRS_INDEX.md), verify the relative links, and run `go test ./...`.
+5. Check terminology against the [shared glossary](docs/GLOSSARY.md) and mathematical notation against the [GitHub math conventions](docs/GITHUB_MATH.md). Update the [problem index](docs/PROBLEMS.md) and the [CLRS index](docs/CLRS_INDEX.md), verify the relative links, and run `go test ./...`.
 
 ## Documentation Conventions
 
