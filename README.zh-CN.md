@@ -89,3 +89,8 @@ go test ./Algorithms/greedy-algorithms/...
 ## 排查记录
 
 [排查记录](docs/investigations/README.zh-CN.md)收集问题定位、对照实验与验证结果，目前包括 [GitHub 数学渲染排查记录](docs/investigations/github-math-rendering-investigation.md)。
+
+## 许可证
+
+- 源代码（`*.go` 文件、`go.mod`，以及文档中的代码片段）采用 [MIT 许可证](LICENSE)。
+- 文档、题解与笔记（所有 `*.md` 文件）采用 [CC BY 4.0](LICENSE-docs) 许可。可以自由转载和改编，但需署名并注明来源仓库链接。

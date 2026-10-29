@@ -89,3 +89,8 @@ The first command tests all packages; the second tests one category.
 ## Investigation Records
 
 [Investigation records](docs/investigations/README.md) document problem diagnosis, comparison experiments, and validation results. The collection currently includes the [GitHub math rendering investigation](docs/investigations/github-math-rendering-investigation.md).
+
+## License
+
+- Source code (`*.go` files, `go.mod`, and code snippets inside the documents) is licensed under the [MIT License](LICENSE).
+- Documentation, solution write-ups, and notes (all `*.md` files) are licensed under [CC BY 4.0](LICENSE-docs). You may share and adapt them, as long as you give attribution and link to this repository.
