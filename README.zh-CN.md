@@ -38,6 +38,9 @@
 
 可以从[算法分类](Algorithms/)、[数据结构分类](data-structures/)或[入门练习](primers/)开始浏览。
 
+<details>
+<summary>展开完整目录树</summary>
+
 ```text
 .
 ├── Algorithms/                  # 按算法分类的题目
@@ -57,16 +60,18 @@
 │   ├── CLRS_INDEX.zh-CN.md      # 中文 CLRS 反查索引
 │   ├── PROBLEMS.md              # 英文题目总表
 │   ├── PROBLEMS.zh-CN.md        # 中文题目总表
-│   ├── GLOSSARY.md             # 中英文全局术语表
-│   ├── GITHUB_MATH.md          # GitHub 数学书写规范
-│   ├── PROMPT.zh-CN.md         # 题解写作提示词
-│   └── investigations/         # 排查记录
+│   ├── GLOSSARY.md              # 中英文全局术语表
+│   ├── GITHUB_MATH.md           # GitHub 数学书写规范
+│   ├── PROMPT.zh-CN.md          # 题解写作提示词
+│   └── investigations/          # 排查记录
 │       ├── README.md
 │       ├── README.zh-CN.md
 │       └── github-math-rendering-investigation.md
 ├── README.md
 └── README.zh-CN.md
 ```
+
+</details>
 
 ## 运行测试
 

@@ -38,6 +38,9 @@ The four-dimensional rating evaluates **a specific solution under stated constra
 
 Browse [algorithms](Algorithms/), [data structures](data-structures/), or [introductory exercises](primers/).
 
+<details>
+<summary>Show the full directory tree</summary>
+
 ```text
 .
 ├── Algorithms/                  # Problems grouped by algorithm
@@ -57,16 +60,18 @@ Browse [algorithms](Algorithms/), [data structures](data-structures/), or [intro
 │   ├── CLRS_INDEX.zh-CN.md      # CLRS reverse index in Chinese
 │   ├── PROBLEMS.md              # Problem index in English
 │   ├── PROBLEMS.zh-CN.md        # Problem index in Chinese
-│   ├── GLOSSARY.md             # Shared Chinese–English glossary
-│   ├── GITHUB_MATH.md          # GitHub math conventions
-│   ├── PROMPT.zh-CN.md         # Prompt for writing summaries (Chinese)
-│   └── investigations/         # Investigation records
+│   ├── GLOSSARY.md              # Shared Chinese–English glossary
+│   ├── GITHUB_MATH.md           # GitHub math conventions
+│   ├── PROMPT.zh-CN.md          # Prompt for writing summaries (Chinese)
+│   └── investigations/          # Investigation records
 │       ├── README.md
 │       ├── README.zh-CN.md
 │       └── github-math-rendering-investigation.md
 ├── README.md
 └── README.zh-CN.md
 ```
+
+</details>
 
 ## Running Tests
 
